@@ -1,0 +1,29 @@
+<h2>{{message}}</h2>
+
+<div class="alert alert-info" ng-show="listOfBlogs.length == 0">No
+	Blogs found</div>
+<table class="table table-bordered table-striped"  ng-show="listOfBlogs.length > 0">
+	<thead>
+		<tr>
+			<th style="text-align: center; width: 25px;">Id</th>
+			<th style="text-align: center;">Blog Owner</th>
+			<th style="text-align: center;">Blog Category</th>
+			<th style="text-align: center;"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in listOfBlogs| orderBy:predicate">
+			<td style="text-align: center;">{{item.id}}</td>
+			<td><a href="#/viewBlogEntriesFromSingleOwner/{{item.owner}}">{{item.owner}}</a></td>
+			<td>{{item.title}}</td>
+
+
+			<td style="width: 100px; text-align: center;">
+				<button class="btn btn-mini btn-danger" ng-click="">Remove</button>
+				<button class="btn btn-mini btn-success" ng-click="">Edit</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr/>
+<a href="#/addNewBlog" class="btn btn-primary">Add New Blog</a>

@@ -1,0 +1,44 @@
+<div class="alert alert-danger" ng-show="error">{{errorMessage}}</div>
+
+<h2>{{message}}</h2>
+
+<form name="createAccountForm" class="form-horizontal">
+
+	<div class="control-group">
+		<label class="control-label" for="acc_name">Account Name</label>
+
+		<div class="controls">
+			<input type="text" id="acc_name" ng-model="account.name"
+				placeholder="Account Name" required="required" min="2" />
+		</div>
+	</div>
+	</br>
+	<div class="control-group">
+		<label class="control-label" for="acc_password">Password</label>
+
+		<div class="controls">
+			<input type="password" id="acc_password" ng-model="account.password"
+				placeholder="Password" required="required" min="2" />
+		</div>
+	</div>
+	</br>
+
+	<div class="control-group">
+		<label class="control-label" for="acc_password_verify">Re-Enter
+			Password</label>
+
+		<div class="controls">
+			<input type="password" id="acc_password_verify"
+				ng-model="account.confirmPassword" placeholder="Re-Enter Password"
+				required="required" min="2"  />
+		</div>
+        <label ng-show="account.password != account.confirmPassword">Passwords do not match...</label>
+	</div>
+	</br>
+
+	<div class="controls">
+		<button type="button" class="btn btn-primary"
+			ng-disabled="!account.name || !account.password ||!account.confirmPassword" ng-hide="editMode"
+			ng-click="addNewAccount(account)">Register</button>
+	</div>
+</form>
