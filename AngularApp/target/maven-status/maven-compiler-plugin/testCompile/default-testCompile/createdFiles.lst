@@ -1,7 +1,0 @@
-com\bibhuti\angularApp\controller\BlogControllerTest.class
-com\bibhuti\angularApp\core\repository\BlogRepositoryTest.class
-com\bibhuti\angularApp\core\repository\BlogCatagoryRepositoryTest.class
-com\bibhuti\angularApp\controller\BlogEntryControllerTest.class
-com\bibhuti\angularApp\controller\AccountControllerTest.class
-com\bibhuti\angularApp\core\repository\BlogEntryRepositoryTest.class
-com\bibhuti\angularApp\core\repository\AccountRepositoryTest.class
